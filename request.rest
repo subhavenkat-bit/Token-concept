@@ -1,0 +1,40 @@
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYnJpbmRoYSIsImlhdCI6MTYyMjcwMDg5MiwiZXhwIjoxNjIyNzAwOTQyfQ.CSvhbRSKj_0rMYPmBit48Cynq4dJpXLqCskCNNi6S0c
+
+//for getting an user detail
+
+
+###
+//for deleting the refreshtoken from the array
+
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYnJpbmRoYSIsImlhdCI6MTYyMjcwMDgyM30.CXAQobHX5ucnIU1QG7vIypIvSCu8mTVUnlFYMocZbGo"
+}
+
+
+
+
+
+###
+//for refreshing tokens
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYnJpbmRoYSIsImlhdCI6MTYyMjcwMDgyM30.CXAQobHX5ucnIU1QG7vIypIvSCu8mTVUnlFYMocZbGo"
+
+}
+
+
+
+###
+// to generate access token for a single user
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username":"brindha"
+}
